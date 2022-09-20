@@ -1,0 +1,233 @@
+/*
+Setjum inn „reset“ sem fjarlægir margin og padding af öllu
+Þessu má ekki breyta
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reiknum stærð á öllum boxum sem border-box.
+Þessu má breyta eða fjarlægja.
+*/
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  
+}
+
+/* og látum erfast á allt */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* hjálpar class sem felur sjónrænt en skjálesarar lesa */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+/* Uppsetning á síðu—layout */
+.content {
+  /* Lætur börn .content raða sér með _flexbox_ */
+  display: flex;
+  /* röðun sé í dálkaröð (niður) */
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1200px;
+
+}
+
+header {
+  background-color: #00bfff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+header h1{
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.content > nav {
+  max-width: 1200px;
+}
+
+.underline{
+  text-decoration: none;
+}
+
+.select{
+  text-decoration: underline;
+}
+
+
+
+
+.content > main {
+  /* Lætur <main> taka allt auka pláss sem er í boði */
+  flex: 1;
+  max-width: 1200px;
+  margin-top: 2rem;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.wrapper{
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+img{
+  float: left;
+}
+
+.text{
+  display: flex;
+  padding-left: 30px;
+  margin-bottom: 0.5rem;
+}
+
+.sites{
+  display: flex;
+  padding-left: 30px;
+  
+}
+
+footer {
+  background-color: #00bfff;
+  width: 100%;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+
+/* almennar skilgreiningar */
+
+h1, h2, h3 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  
+  /* TODO setja almennar skilgreinar fyrir fyrirsagnir */
+}
+
+a {
+  color: #000000;
+  text-decoration: underline;
+
+  /* TODO setja almennar skilgreinar fyrir tengla */
+}
+
+/* nav — valmynd */
+
+
+nav ul li {
+  display: inline-block;
+  margin: 0.1rem;
+  /* TODO */
+}
+
+/* TODO */
+
+
+/* main — meginmál */
+
+/* TODO */
+
+/* töflur */
+
+
+/* TODO */
+
+/* form */
+
+/* TODO */
+
+fieldset{
+  border-color: #00bfff;
+  border-width: 1px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+
+}
+
+legend{
+  font-size: 1.5rem;
+  margin:0.25rem;
+}
+
+button{
+  background-color: #afebff;
+  border-color: #00bfff;
+  border-radius: 6px;
+}
+
+label{
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+input, select, textarea{
+  display: block;
+}
+
+.aboutpic{
+  width: 100%;
+}
+
+.connect{
+  display: inline-block;
+}
+
+blockquote{
+  margin-bottom: 1rem;
+  background-color: none;
+  display: block;
+}
+
+section, p{
+  display: block;
+  margin-bottom: 1rem;
+}
+
+table {
+  border-spacing: 0;
+  text-align: left;
+
+
+  
+}
+tr td{
+  padding: 0.25rem;
+}
+
+table tr:nth-child(even) td {
+  background-color: #afebff;
+  text-align: left;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
