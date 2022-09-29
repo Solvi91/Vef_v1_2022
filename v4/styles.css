@@ -1,28 +1,24 @@
-/* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
+
 * {
     margin: 0;
     padding: 0;
   }
   
-  /* Reiknum stærð á öllum boxum sem border-box */
   html {
     box-sizing: border-box;
   
-    /* Lætur skroll innan síðu taka tíma */
     scroll-behavior: smooth;
   }
   
-  /* og látum erfast á allt */
   *, *:before, *:after {
     box-sizing: inherit;
   }
   
-  /* Breytur sem skal nota */
   
   :root {
-    /* Grunn bilið okkar er 1rem == 16px */
+    
     --spacing: 1rem;
-    /* Hámarksbreidd á efni */
+    
     --max-width: 1200px;
   
     --color-primary: #f0f0f8;
@@ -31,48 +27,40 @@
     --color-text: #000;
     --color-border: #ccc;
   
-    /* Letur stillingar */
+   
     --font-base-body-px: 16px;
     --font-base-size: 1rem;
     --font-family-base: 'Nunito', Helvetica, Arial, sans-serif;
     --font-family-heading: 'Domine', Georgia, serif;
   }
   
-  /* Leturgerðir */
-  
-  /* TODO Setja upp leturgerðir */
-  
-  /* Almennt */
-  
   body {
     color: var(--color-text);
     font-size: var(--font-base-body-px);
     line-height: 1.5;
     font-family: var(--font-family-base);
-    font-family: var(--font-family-heading);
   }
 
   .wrapper{
     max-width: var(--max-width);
     margin: 0 auto;
-    
-    
   }
   
   h1, h2, h3 {
     font-family: var(--font-family-heading);
-    
   }
 
   p{
     margin-bottom: var(--spacing);
-    
   }
 
   h3{
     margin-bottom: var(--spacing);
   }
 
+  .kicker p{
+    text-transform: capitalize;
+  }
 
   header {
     display: flex;
@@ -87,6 +75,8 @@
   }
 header .content {
   margin: auto;
+  text-align: center;
+  
 }
 header .protection{
   position: absolute;
@@ -118,8 +108,6 @@ header .protection{
     font-size: 2rem;
   }
 
-
-  
   header .content .button {
     display: inline-block;
     padding: 0.4rem;
@@ -145,7 +133,6 @@ header .protection{
     font-family: var(--font-family-base);
   }
 
-  
    .button-secondary {
     display: inline-block;
     padding: 0.4rem;
@@ -171,7 +158,6 @@ header .protection{
     
   }
   
-
   .top .info .left {
     display: flex;
     flex-direction: column;
@@ -189,7 +175,6 @@ header .protection{
     transform: rotate(3deg);
   }
 
-  
    .top .info .left .kicker{
     font-size: 14px;
     text-transform: capitalize;
@@ -198,8 +183,6 @@ header .protection{
   .top .info .left p{
     margin-bottom: calc(var(--spacing)*2);
   }
-
-
 
   .reason{
     display: flex;
@@ -240,19 +223,27 @@ header .protection{
 
   .cards .content {
     display: flex;
-    align-items: stretch;
-    margin-bottom: var(--spacing);
+    align-items: cover;
   }
 
   .cards .content .card{
     display: flex;
     flex-direction: column;
     width: calc(100%/2);
+    margin-top: var(--spacing);
     margin-right: var(--spacing);
-    border: 0.5px solid var(--color-text);
-    border-top: none;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    
+  }
+
+  .cards .content .text{
+    border: solid var(--color-text);
+    border-width: 0px 0.5px 0.5px 0.5px;
+    height: 100%;
+  }
+
+  .cards .content .text .tengill {
+    display: flex;
+  flex: 1;
     
   }
 
@@ -277,57 +268,12 @@ header .protection{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
-
-
-
-  .cards .content-two {
-    display: flex;
-    align-items: stretch;
-    margin-bottom: var(--spacing);
-  }
-
-  .cards .content-two .card{
-    display: flex;
-    flex-direction: column;
-    border: 0.5px solid var(--color-text);
-    border-top: none;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    height: 100%;
-    
-    width: 100%;
-    margin-right: var(--spacing);
-    
-  }
-
-  .cards .content-two .card p {
-    display: flex;
-    flex: 1;
-    margin-bottom: var(--spacing);
-  }
-
-  .cards .content-two .card .button .button-secondary{
-    align-content: flex-end;
-  }
-
-  .cards .content-two .card .picture{
-    order: -1;
-  }
-
-   .cards .content-two .card img{
-    height: 400px;
-    width: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
+  
   footer{
     text-align: center;
-    margin-top: var(--spacing);
     padding: var(--spacing) 0;
     background-color: var(--color-primary);
+    margin-top: calc(var(--spacing)*5);
   }
 
   
