@@ -23,6 +23,10 @@ let points = 0;
  */
 function isValidNum(numAsString, min, max) {
   /* TODO útfæra */
+  if(isValidNum( numAsString < min || numAsString > max))
+  return true;
+  else
+  return false;
 }
 
 /**
@@ -33,6 +37,8 @@ function isValidNum(numAsString, min, max) {
  */
 function getChoice(numOfCups) {
   /* TODO útfæra */
+
+  return null;
 }
 
 /**
@@ -61,6 +67,7 @@ Verður að vera gildi á bilinu [${MIN_NUM_OF_CUPS}, ${MAX_NUM_OF_CUPS}].
       return;
     }
   /* TODO útfæra */
+
   } while (true)
 }
 
